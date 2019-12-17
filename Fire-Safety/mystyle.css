@@ -1,0 +1,102 @@
+.navbar{
+    background: url('assets/preboobg.png');
+   /*#330000*/
+  
+  }
+  .nav-link{
+    margin: 2%;
+   
+  }
+  .nav-item{
+    border:1px solid;
+    border-radius: 25px;
+    background:orange ;
+    margin:1%;
+  }
+ 
+ 
+
+ .speech{
+
+  margin:1%;
+  display: inline-block;
+  position: relative;
+  font-size: 1.1em;
+  background: #E76363;
+  color:black;
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+ 
+}
+
+
+.speech:after {
+content: ' ';
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1); 
+position: absolute;
+width: 0;
+height: 0;
+left: -20px;
+right: auto;
+top: 100px;
+bottom: auto;
+border: 12px solid;
+border-color: #E76363 transparent transparent #E76363;
+}
+
+
+
+
+
+.speech1{
+
+  
+  position: relative;
+  font-size: 1.1em;
+  background: #E76363;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 400px;
+  
+ 
+}
+
+.d{
+
+color: black;
+}
+
+.l{
+
+text-align: center;
+font-size: 26px;
+color: #fff;
+}
+
+
+
+.modal-title{
+
+text-align: center;
+}
+
+.p1{
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.p{
+  font-size: 30px;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -15%;
+  
+}
+
+
+
+  

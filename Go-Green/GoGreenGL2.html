@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MyPreBOO - અહીં તમારું બાળક કોડ શીખે છે</title>
+
+  <!--EXTERNAL CSS LINK-->
+
+  <link rel="stylesheet" type="text/css" href="gogreen.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+   <!-- Blockly Script -->
+   <script src="blockly_compressed.js"></script>
+   <script src="blocks_compressed.js"></script>
+   <script src="msg/js/en.js"></script>
+   <script src="javascript_compressed.js"></script>
+   <script src="generators/javascript/flowL2.js"></script>
+   <script src="blocks/flowGL.js"></script>
+
+   <!--SCRIPT FOR THE INSTRUCTIONS ON THE LEFT SIDE -->
+
+   <script>
+    function RightCall(){
+        
+        document.getElementsByClassName("speech")[0].innerHTML="<strong>આગળ!!<br> વાહ !! તેથી હવે તમે 'આગળની દિશા' મિનિની ફરતા જોઈ શકો છો!</strong>";
+        document.getElementsByClassName("speech")[0].style="color:black;"
+    }
+    function Left(){
+        
+        document.getElementsByClassName("speech")[0].innerHTML="<strong>પછાત!!<br> વાહ !! તો હવે તમે 'પછાત દિશા' માં મિનિની ફરતા જોઈ શકો છો!</strong>";
+        document.getElementsByClassName("speech")[0].style="color:black;"
+    }
+    function Up(){
+        
+        document.getElementsByClassName("speech")[0].innerHTML="<strong>ઉપર તરફ!!<br> વાહ !! તો હવે તમે 'ઉપરની દિશામાં' મિનિની ફરતા જોઈ શકો છો!</strong>";
+        document.getElementsByClassName("speech")[0].style="color:black;"
+    }
+    function Down(){
+        
+        document.getElementsByClassName("speech")[0].innerHTML="<strong>નીચે તરફ!!<br> વાહ !! તો હવે તમે 'નીચે તરફ' મિનિની ફરતા જોઈ શકો છો!</strong>";
+        document.getElementsByClassName("speech")[0].style="color:black;"
+    }
+</script>
+
+<style>
+
+  .l{
+  
+    text-align: center;
+  
+  }
+  
+  .p{
+  
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  .m{
+  
+    font-size: 36px;
+    text-align: center;
+    color: #26bd00;
+    padding-left: 11%;
+  
+  }
+  
+  .a{
+  
+    text-align:center;
+    font-size: 40px;
+    color: blue;
+  }
+  
+  </style>
+  
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+      <img src="assets/prebooIMG.png" alt="">
+    <div class="container">
+       
+            
+          
+     <h3 style="color:#00b0bd">ક્રમાંક - 3 : ગો ગ્રીન</h3>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="GoGreenGL1.html" style="color: white;">સ્તર-1
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GoGreenGL2.html" style="color:white;">સ્તર-2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GoGreenGL3.html" style="color: white;">સ્તર-3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GoGreenGL4.html" style="color: white;">સ્તર-4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="GoGreenGL5.html" style="color: white;">સ્તર-5</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Page Content -->
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+            <img class="img1" src="assets/12.png" height="auto;"> 
+          <div class="speech">
+                        
+             <span style="color:maroon;"> <strong>“ ઘણા નિર્દોષ પ્રાણી પ્લાસ્ટિક ખાય છે અને મરી જાય છે જેના કારણે આપણું પૃથ્વી રડે છે.”</strong><br>
+              <p class="d">શું તમે રેડ ડસ્ટબીનમાં યોગ્ય કચરો ફેંકવા માટે મીનીને મદદ કરી શકો છો ??</p>
+            </span>
+            
+    </div>
+    
+
+        </div>
+        <div class="col-sm-2" style="margin-top: 1%">
+            <button type="button" class="btn btn-secondary btn-lg"  style="padding-right: 35px;" onclick="runJS()" >રન</button>
+            <button type="button" class="btn btn-danger btn-lg"  onclick="Reset()"> રિસેટ</button>
+        </div>
+
+        <div class="col-sm-4" style="margin-top: 1%;">
+            <div class="speech1">
+                              
+                <span style="color:black;"><strong>અરે મિત્રો!!!</strong> પાથ બતાવવામાં આવે છે કે જે મિનિને ખસેડવું જોઈએ.ડાબી બાજુથી બ્લોગ્સને ખેંચીને અને ખેંચીને આ પાથ પર મિનિની ચાલ બનાવો કાર્યસ્થળની જમણી બાજુએ!!</span></div>
+        </div>
+        </div>
+        </div>
+
+      <!--BLOCKLY DIV-->
+         
+        <div id="blocklyDiv" style="height:480px; width:40%; float: left; margin-right:2%; ">
+                    <xml id="toolbox" style="display:block">
+                      <block type="start"></block>
+                    
+                      <block type="east"></block>
+                      <block type="west"></block>
+                      <block type="down"></block>
+                      <block type="up"></block>
+                      <block type="loop"></block>                    
+                      <block type="controls_if"></block>
+                    </xml>
+      </div>
+   
+      
+        <script src="phaser.min.js"></script>
+        <script src="PhaserInterface2.js"></script>
+      </div>
+ 
+</div>
+
+        <!-- Pop up functionality for Instuction on load !! -->
+
+        <div class='modal fade' id='exampleModal2' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true' >
+            <div class='modal-dialog modal-lg'  role='document'>
+              <div class='modal-content' style="font-family: cursive;" >      
+               
+                    <div class='modal-header' style="background:rgb(36, 34, 34)">
+                  <h1 class='modal-title' id='exampleModalLabel'style="color:white">બધા ને નમસ્તે!</h1>
+                  <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+                    <span aria-hidden='true'>&times;</span>
+                  </button>
+                  </div>
+                
+                  <div class='modal-body' style="background-image:url(assets/Untitled.jpg); height:800px; background-repeat: no-repeat;">
+                         
+                    <p class="l" style="color:black; padding-top: 150px; ">
+                      <strong style="font-size: 50px;">  - સ્તર : 2 -</strong>  
+                                  <br><br>
+                                  <p class="m">
+                                    મીની માં પાર્ક છે.<br>
+                                    તેણીએ કચરાને ફ્લોર પર પડેલા જોયા.<br> તેને રેડ ડસ્ટબીનમાં યોગ્ય કચરો <br>ફેંકવામાં મદદ કરો.
+                                   
+                       </p></p> 
+  
+                      </div>  
+                  
+                </div>
+              </div>
+            </div> 
+    
+    <!-- Pop up functionality for Game over !! -->
+
+<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-lg modal-lg' role='document'>
+    <div class='modal-content' style="font-family: cursive; text-align: center;">      
+     
+          <div class='modal-header'style="background: black; color:white;">
+        <h3 class='modal-title' id='exampleModalLabel'>ખેલ ખતમ</h3>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+          <span aria-hidden='true'>&times;</span>
+        </button>
+        </div>
+      
+        <div class='modal-body'  style=" height:auto;">
+          <img class="img-responsive" src="assets/gameover.png">
+          
+               
+                <h2 style="color:rgb(241, 72, 30);"> અવિશ્વસનીય! સારું કામ મિત્ર.<br> ચાલુ રાખો!</h2>
+
+ 
+                <div class="imgn">
+                  <a href="GoGreenGL2.html">
+                                       <img  alt="next" src="assets/nextimage.png" width="20%" height="auto">
+                           </a>
+                                      </div>
+ 
+                                      <div class="imgp">                    
+                                        <img  alt="previous" src="assets/imgp.png"  data-dismiss='modal' onclick="popup()" width="20%">
+                              
+            
+                      </div>
+            
+                                    </div>  
+      
+    </div>
+  </div>
+</div>
+
+     <!-- Pop up functionality for 'are you sure?' !! -->
+
+<div class='modal fade' id='exampleModal4' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+  <div class='modal-dialog modal-lg' role='document'>
+    <div class='modal-content' style="font-family: cursive; text-align: center;">      
+     
+        <!--  <div class='modal-header'style="background: black; color:white;">
+        <h3 class='modal-title' id='exampleModalLabel'>ARE YOU SURE???</h3></div>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+        </div>
+      -->
+        <div class='modal-body'style="background:lightblue;">
+
+          <h2 style="text-align: center;"><strong> શું તમે ખાતરી કરો છો ??</strong></h2>
+
+          <hr>
+            <a href="GoGreenGL2.html">
+                <img  alt="yes" src="assets/yes.png">
+                </a>    
+                
+                
+          <hr>
+          <hr>
+
+                <a href="GoGreenGL3.html">
+                    <img  alt="no" src="assets/no.png" width="20%" height="auto">
+                    </a>
+                    
+                    
+         <!-- <img id="star" src="assets/angryowl.png">            
+                <h1 style="color:red;"><b>Please, place the Start block first !!</b><br></h1>
+               -->
+
+          </div>  
+      
+    </div>
+  </div>
+</div>
+   <!-- Pop up functionality for using start button !! -->
+
+<div class='modal fade' id='exampleModal3' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog modal-lg' role='document'>
+      <div class='modal-content' style="font-family: cursive; text-align: center;">      
+       
+            <div class='modal-header'style="background: black; color:white;">
+          <h3 class='modal-title' id='exampleModalLabel'>
+            ચેતવણી!</h3>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+            <span aria-hidden='true'>&times;</span>
+          </button>
+          </div>
+        
+          <div class='modal-body'>
+            <img id="star" src="assets/startbutton2.jpg">
+            
+                  <h1 style="color:red;"></h1>
+                 
+            </div>  
+        
+      </div>
+    </div>
+  </div>
+
+
+  
+    <!-- Pop up functionality For Wrong Soln!! -->
+
+<div class='modal fade' id='exampleModal1' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true' style="width:100%;"  onclick="window.location.reload();" >
+    <div class='modal-dialog modal-lg' role='document' style="width:100%;" >
+      <div class='modal-content'style="background: lightsteelblue; font-family:cursive; ">      
+            <div class='modal-header'>
+                   <h2>ખોટી ચાલ!</h2>
+                    <button type='button' class='close'onclick="window.location.reload();" data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+                      <span aria-hidden='true'>&times;</span>
+                    </button>
+                    </div>
+        
+          <div class='modal-body' style="background-image:url(assets/wrongpopup.jpg); height:730px; background-repeat: no-repeat; " >
+           
+                  
+            </div>  
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    
+function popup(){
+    $("#exampleModal4").modal('show');
+  }
+
+$(document).ready(function(){
+
+$("#exampleModal2").modal('show');
+      });
+  </script>
+     <script type="text/javascript">
+
+              function runJS() {
+                Blockly.JavaScript.addReservedWords('code');
+                var code = Blockly.JavaScript.workspaceToCode();
+                // alert(code);
+                try {
+                  eval(code);
+                }
+                catch (e) {
+                  End();
+                }
+              }
+  
+              var workspace = Blockly.inject('blocklyDiv',
+              {toolbox: document.getElementById('toolbox'),
+              
+              scrollbars:true,
+              trashcan:true,
+              });
+              function Reset(){
+                player.x=50;
+                player.y=380;
+                player.anims.play('turn',true);
+                document.getElementsByClassName("speech")[0].innerHTML=" Play with these blocks to see what they make DEN do! Get DEN to the Tap and save water to complete the level.";
+                if (Blockly.mainWorkspace !== null) {
+                Blockly.mainWorkspace.clear();
+                 }
+                 count=0;
+            }
+
+              var onresize = function(e) {
+    // Compute the absolute coordinates and dimensions of blocklyDiv.
+    var element = blocklyDiv;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyDiv.
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyDiv.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyDiv.offsetHeight + 'px';
+    Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+              </script>
+ 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                  
+
+</body>
+
+</html>

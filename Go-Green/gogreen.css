@@ -1,0 +1,100 @@
+
+  .navbar{
+    background:url('assets/preboobg.png');
+   
+  
+  }
+  .nav-link{
+    margin: 2%;
+   
+  }
+  .nav-item{
+    border:1px solid;
+    border-radius: 25px;
+    background: #26bd00;
+    margin:1%;
+  }
+  .container-fluid{
+      font-family: cursive;
+   
+  }
+ .container{
+  font-family: cursive;
+ }
+ 
+
+
+
+.speech{
+
+    margin-top:1%;
+    display: inline-block;
+    position: relative;
+    font-size: 1.1em;
+    background: #00bd2f;
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    font-family: cursive;
+    
+}
+  
+
+.speech:after {
+  content: ' ';
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); 
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 87px;
+	bottom: auto;
+	border: 12px solid;
+	border-color:#00bd2f transparent transparent #00bd2f;
+}
+
+.speech1{
+
+    
+    position: relative;
+    font-size: 1.1em;
+    background: #00bd2f;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 400px;
+    font-family: cursive;
+   
+}
+
+.d{
+
+  color: black;
+}
+
+.l{
+
+  text-align: center;
+  font-size: 26px;
+  color: #fff;
+}
+
+
+  .modal-title{
+
+  text-align: center;
+
+}
+
+.img-responsive{
+
+  position: relative;
+  right:9.2%;
+  top: 0;
+}
+
+
+

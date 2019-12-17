@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>MyPreBOO - Here your child learns to code </title>
+  <!-- style sheet-->
+  <link href="mystyle.css" rel="stylesheet">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>
+      function RightCall(){
+          
+          document.getElementsByClassName("speech")[0].innerHTML="<strong>FORWARD!!<br> WOW !! So now you can see ZEE moving in the 'FORWARD DIRECTION' !</strong>";
+          document.getElementsByClassName("speech")[0].style="color:black;"
+
+      }
+      function Left(){
+          
+          document.getElementsByClassName("speech")[0].innerHTML="<strong>BACKWARD!!<br> WOW !! So now you can see ZEE moving in the 'BACKWARD DIRECTION' !</strong>";
+          document.getElementsByClassName("speech")[0].style="color:black;"
+
+
+      }
+      function Up(){
+          
+          document.getElementsByClassName("speech")[0].innerHTML="<strong>UPWARD!!<br> WOW !! So now you can see ZEE moving in the 'UPWARD DIRECTION' !</strong>";
+          document.getElementsByClassName("speech")[0].style="color:black;"
+
+
+      }
+      function Down(){
+          
+          document.getElementsByClassName("speech")[0].innerHTML="<strong>DOWNWARD!!<br> WOW !! So now you can see ZEE moving in the 'DOWNWARD DIRECTION' !</strong>";
+          document.getElementsByClassName("speech")[0].style="color:black;"
+
+      }
+  </script>
+   <!-- Blockly Script -->
+   <script src="blockly_compressed.js"></script>
+   <script src="blocks_compressed.js"></script>
+   <script src="msg/js/en.js"></script>
+   <script src="javascript_compressed.js"></script>
+   <script src="generators/javascript/flowL4.js"></script>
+   <script src="blocks/flow.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark  static-top">
+      <img src="assets/prebooIMG.png" alt="">
+    <div class="container">
+       
+            
+          
+     <h3 style="color:rgb(231, 99, 99)">LESSON-2:HELPING ELDERS</h3>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="HelpingEldersLevel1.html" style="color: white;">Level-1
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HelpingEldersLevel2.html" style="color:white;">Level-2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HelpingEldersLevel3.html" style="color: white;">Level-3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HelpingEldersLevel4.html" style="color: white;">Level-4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="HelpingEldersLevel5.html" style="color: white;">Level-5</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <!-- Page Content -->
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+            <img class="img1" src="assets/owlpopup.png"> 
+          <div class="speech">
+                        
+             <span style="color:navy;"> <strong>“Help and forget, that’s the motto for the true human”</strong><br>
+              <p class="d">Can you help ZEE to help the elder??</p>
+            </span>
+            
+    </div>
+    
+
+        </div>
+        <div class="col-sm-2" style="margin-top: 1%">
+            <button type="button" class="btn btn-secondary btn-lg"  style="padding-right: 35px;" onclick="runJS()" > Run </button>
+            <button type="button" class="btn btn-danger btn-lg"  onclick="Reset()"> Reset</button>
+        </div>
+
+        <div class="col-sm-4" style="margin-top: 1%;">
+            <div class="speech1">
+                              
+                <span style="color:black;"> <strong>HEY!!!</strong> Path is shown according to which ZEE should move.
+                                                Make ZEE move on this path by DRAGGING & DROPING the blocks from the left
+                                                to right side of the WORKSPACE!</span>
+               </div>
+        </div>
+        </div>
+        </div>
+
+      <!--BLOCKLY DIV-->
+         
+        <div id="blocklyDiv" style="height:480px; width:40%; float: left; margin-right:2%; ">
+                    <xml id="toolbox" style="display:block">
+                      <block type="start"></block>
+                    
+                      <block type="east"></block>
+                      <block type="west"></block>
+                      <block type="down"></block>
+                      <block type="up"></block>
+                  <block type="loop"></block>                  
+                    </xml>
+      </div>
+   
+      
+        <script src="phaser.min.js"></script>
+        <script src="PhaserInterfaceL4.js"></script>
+      </div>
+ 
+</div>
+
+        <!-- Pop up functionality for Instuction on load !! -->
+
+        <div class='modal fade' id='exampleModal2' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true' >
+            <div class='modal-dialog modal-lg'  role='document'>
+              <div class='modal-content' style="font-family: cursive;" >      
+               
+                    <div class='modal-header' style="background:rgb(36, 34, 34)">
+                  <h1 class='modal-title' id='exampleModalLabel'style="color:white">HELLO !</h1>
+                  <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+                    <span aria-hidden='true'>&times;</span>
+                  </button>
+                  </div>
+                
+                  <div class='modal-body' style="background-image:url(assets/pop-up7.jpg); height:520px; background-repeat: no-repeat;">
+                         
+                    <p class="l" style="padding: 17%; font-size:26px; color:rgb(209, 73, 73) ">
+                        <strong>- LEVEL : 4 -</strong>                           <br>
+                        
+                      "Hey you! <br>
+
+                      ZEE's grandfather needs some help in getting the medicine. WILL YOU HELP ZEE TO HELP HER GRANDFATHER?! "<br>
+
+'All the best!!'
+      </p> 
+                    </div>  
+                
+              </div>
+            </div>
+          </div>
+    
+    <!-- Pop up functionality for Game over !! -->
+
+<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog modal-lg' role='document' style="width:110%;">
+      <div class='modal-content' style="font-family: cursive; text-align: center;">      
+       
+            <div class='modal-header'style="background: black; color:white;">
+          <h3 class='modal-title' id='exampleModalLabel'>GAME OVER</h3>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+            <span aria-hidden='true'>&times;</span>
+          </button>
+          </div>
+        
+          <div class='modal-body'>
+            <img id="star" src="assets/pop-up3.gif">
+            
+                  <h1 style="color:red;"><b>CONGRATULATIONS!!</b><br></h1>
+                  <h2 style="color:black;"> Incredible! Take a bow CHAMP.<br> Keep it up!</h2>
+
+                  <div class="imgn">
+                    <a href="HelpingEldersLevel4.html">
+                                         <img  alt="next" src="assets/nextimage.png" width="20%" height="auto">
+                             </a>
+                                        </div>
+  
+  <div class="imgp">                    
+                              <img  alt="previous" src="assets/imgp.png"  data-dismiss='modal' onclick="popup()" width="20%" height="auto">
+                    
+  
+            </div>
+            </div>  
+        
+      </div>
+    </div>
+  </div>
+
+   <!-- Pop up functionality for 'are you sure?' !! -->
+
+<div class='modal fade' id='exampleModal4' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'> 
+  <div class='modal-dialog modal-lg' role='document'>
+    <div class='modal-content' style="font-family: cursive; text-align: center;">      
+     
+        <!--  <div class='modal-header'style="background: black; color:white;">
+        <h3 class='modal-title' id='exampleModalLabel'>ARE YOU SURE???</h3></div>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+        </div>
+      -->
+        <div class='modal-body'style="background:lightblue;">
+
+          <h2 style="text-align: center;"><strong> ARE YOU SURE?? </strong></h2>
+
+          <hr>
+            <a href="HelpingEldersLevel3.html">
+                <img  alt="yes" src="assets/yes.png" width="20%" height="auto">
+                </a>    
+                
+                
+          <hr>
+          <hr>
+
+                <a href="HelpingEldersLevel5.html">
+                    <img  alt="no" src="assets/no.png" width="20%" height="auto">
+                    </a>
+                    
+                    
+         <!-- <img id="star" src="assets/angryowl.png">            
+                <h1 style="color:red;"><b>Please, place the Start block first !!</b><br></h1>
+               -->
+
+          </div>  
+      
+    </div>
+  </div>
+</div>
+
+
+   <!-- Pop up functionality for using start button !! -->
+
+<div class='modal fade' id='exampleModal3' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog modal-lg' role='document'>
+      <div class='modal-content' style="font-family: cursive; text-align: center;">      
+       
+            <div class='modal-header'style="background: black; color:white;">
+          <h3 class='modal-title' id='exampleModalLabel'>WARNING</h3>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+            <span aria-hidden='true'>&times;</span>
+          </button>
+          </div>
+        
+          <div class='modal-body'>
+            <img id="star" src="assets/angryowl.png">
+            
+                  <h1 style="color:red;"><b>Please, place the Start block first !!</b><br></h1>
+                 
+            </div>  
+        
+      </div>
+    </div>
+  </div>
+
+
+  
+    <!-- Pop up functionality For Wrong Soln!! -->
+
+<div class='modal fade' id='exampleModal1' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true' style="width:100%;"  onclick="window.location.reload();" >
+    <div class='modal-dialog modal-lg' role='document' style="width:100%;" >
+      <div class='modal-content'style="background: lightsteelblue; font-family:cursive; ">      
+            <div class='modal-header'>
+                   <h2>WRONG MOVE!!</h2>
+                    <button type='button' class='close'onclick="window.location.reload();" data-dismiss='modal' aria-label='Close' style="color: red; font-size: 70px;">
+                      <span aria-hidden='true'>&times;</span>
+                    </button>
+                    </div>
+        
+          <div class='modal-body' style="background-image:url(assets/pop-up22.jpg); height:580px; background-repeat: no-repeat;" >
+           
+                  
+            </div>  
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    
+function popup(){
+    $("#exampleModal4").modal('show');
+  }
+
+$(document).ready(function(){
+
+$("#exampleModal2").modal('show');
+      });
+  </script>
+     <script type="text/javascript">
+
+              function runJS() {
+                Blockly.JavaScript.addReservedWords('code');
+                var code = Blockly.JavaScript.workspaceToCode();
+                // alert(code);
+                try {
+                  eval(code);
+                }
+                catch (e) {
+                  End();
+                }
+              }
+  
+              var workspace = Blockly.inject('blocklyDiv',
+              {toolbox: document.getElementById('toolbox'),
+              
+              scrollbars:true,
+              trashcan:true,
+              });
+              function Reset(){
+              kid.x =150;
+              kid.y=250;
+              old.x=50;
+              old.y=320;
+              med.x=430;
+              med.y=260;
+
+                document.getElementsByClassName("speech")[0].innerHTML=" Play with these blocks to see what they make ZEE do! Get ZEE to the Tap and save water to complete the level.";
+                if (Blockly.mainWorkspace !== null) {
+                Blockly.mainWorkspace.clear();
+                 }
+                 count=0;
+            }
+
+              var onresize = function(e) {
+    // Compute the absolute coordinates and dimensions of blocklyDiv.
+    var element = blocklyDiv;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyDiv.
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyDiv.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyDiv.offsetHeight + 'px';
+    Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+              </script>
+ 
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                  
+
+</body>
+
+</html>

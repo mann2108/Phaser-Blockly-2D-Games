@@ -1,0 +1,106 @@
+
+    body{
+    background:linear-gradient(white,rgb(231, 99, 99));
+
+    
+ 
+      font-family: cursive;
+    }
+  .navbar{
+    background: #330000;
+   /*#330000*/
+  
+  }
+  .nav-link{
+    margin: 2%;
+   
+  }
+  .nav-item{
+    border:1px solid;
+    border-radius: 25px;
+    background:rgb(231, 99, 99) ;
+  margin:1%;
+  }
+  .container-fluid{
+      font-family: cursive;
+   
+  }
+ .container{
+  font-family: cursive;
+ }
+ 
+
+ .speech{
+
+margin:1%;
+  display: inline-block;
+  position: relative;
+
+  font-size: 1.1em;
+  background: rgb(231, 99, 99);
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  font-family: cursive;
+  
+
+  
+}
+
+
+.speech:after {
+content: ' ';
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1); 
+position: absolute;
+width: 0;
+height: 0;
+left: -20px;
+right: auto;
+top: 87px;
+bottom: auto;
+border: 12px solid;
+border-color: rgb(231, 99, 99) transparent transparent rgb(231, 99, 99);
+}
+
+
+
+
+
+.speech1{
+
+  
+  position: relative;
+
+  
+  font-size: 1.1em;
+  background: rgb(231, 99, 99);
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  width: 400px;
+  font-family: cursive;
+ 
+}
+
+.d{
+
+color: black;
+}
+
+.l{
+
+text-align: center;
+font-size: 26px;
+color: #fff;
+}
+
+
+
+.modal-title{
+
+text-align: center;
+}
+
+  
